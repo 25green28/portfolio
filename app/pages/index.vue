@@ -1,5 +1,8 @@
 <script setup lang="ts">
   import Section from "~/components/Section.vue";
+  import ProjectCard from "~/components/ProjectCard.vue";
+  import TechnologyPill from "~/components/TechnologyPill.vue";
+  import Button from "~/components/Button.vue";
 
   const experienceIn = ["Java", "React", "Spring Boot", "Next.js"]
   const actionOptions = ["My projects", "Contact me"]
@@ -27,21 +30,25 @@
             <div class="flex flex-col gap-8 w-full md:w-fit">
               <div class="flex flex-col justify-center gap-3 text-zinc-200">
                 <div class="flex flex-row items-space gap-3 lg:gap-5 min-w-full flex-wrap">
-                  <span class="border px-3 lg:px-4 py-1 border-white/5 rounded-full text-zinc-200 text-sm bg-zinc-800/50"
-                        v-for="item in experienceIn" :key="item">
+                  <TechnologyPill v-for="item in experienceIn" :key="item">
                     {{item}}
-                  </span>
+                  </TechnologyPill>
                 </div>
               </div>
               <div class="flex flex-col lg:flex-row gap-5 min-w-full">
                 <a :href="index === 0 ? '#projects' : '#contact'" v-for="(item, index) in actionOptions" :key="item">
-                  <div class="border px-10 py-2 border-white/20 rounded-2xl flex flex-row justify-center items-center
-                        gap-3 transition-color duration-200"
-                       :class="index === 0 ? 'bg-green-700 hover:bg-green-800' : 'hover:bg-white/15'">
+                  <Button :class="index === 0 ? 'bg-green-700 hover:bg-green-800' : 'hover:bg-white/15'">
                     <Icon v-if="index === 0" name="eos-icons:application" class="w-5 h-5 shrink-0"/>
                     <Icon v-if="index === 1" name="ic:outline-email" class="w-5 h-5 shrink-0"/>
                     {{item}}
-                  </div>
+                  </Button>
+<!--                  <div class="border px-10 py-2 border-white/20 rounded-2xl flex flex-row justify-center items-center-->
+<!--                        gap-3 transition-color duration-200"-->
+<!--                       :class="index === 0 ? 'bg-green-700 hover:bg-green-800' : 'hover:bg-white/15'">-->
+<!--                    <Icon v-if="index === 0" name="eos-icons:application" class="w-5 h-5 shrink-0"/>-->
+<!--                    <Icon v-if="index === 1" name="ic:outline-email" class="w-5 h-5 shrink-0"/>-->
+<!--                    {{item}}-->
+<!--                  </div>-->
                 </a>
               </div>
             </div>
@@ -54,13 +61,26 @@
     </section>
   </Section>
   <Section>
-    <section id="about" class="min-h-screen">
-      About
+    <section id="projects" class="min-h-screen pt-32">
+      <h2 class="font-bold text-5xl text-center">My Projects</h2>
+      <p class="text-zinc-200 text-center pt-12">Everything from hobbist projects to real world-like applications</p>
+      <div class="flex flex-row flex-wrap justify-center gap-x-12 gap-y-16 pt-16 mx-12">
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+      </div>
     </section>
   </Section>
   <Section>
-    <section id="projects" class="min-h-screen">
-      Projects
+    <section id="about" class="min-h-screen">
+      About
     </section>
   </Section>
   <Section>

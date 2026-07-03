@@ -19,4 +19,8 @@
   body {
     @apply bg-zinc-950 text-zinc-100;
   }
+
+  .secondText {
+    @apply text-zinc-300;
+  }
 </style>
