@@ -3,7 +3,7 @@
 </script>
 
 <template>
-
+  My Footer
 </template>
 
 <style scoped>

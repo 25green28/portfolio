@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background-primary: var(--color-zinc-900);
+
+    --color-text-primary: var(--color-zinc-100);
+    --color-text-secondary: var(--color-zinc-200);
+
+    --color-primary: var(--color-green-400);
+    --color-primary-hover: var(--color-green-500);
+    --color-primary-button: var(--color-green-600);
+    --color-primary-button-hover: var(--color-green-700);
+
+    --color-secondary-button: var(--color-zinc-900);
+    --color-secondary-button-hover: var(--color-zinc-800);
+    /*--color-secondary-card: var(--color-red-900);*/
+    /*--color-secondary-card-hover: var(--color-red-700);*/
+
+    --color-border-color-strong: rgba(255, 255, 255, 0.1);
+    --color-border-color-light: rgba(255, 255, 255, 0.075);
+}
+
+@utility myBorder {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 1rem;
+}

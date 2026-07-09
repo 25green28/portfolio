@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="bg-zinc-950 text-zinc-100">
+  <div class="bg-background-primary text-text-primary">
     <AppHeader/>
     <NuxtPage/>
     <AppFooter/>
@@ -12,12 +12,10 @@
 </template>
 
 <style>
+  @reference "tailwindcss";
+
   html {
     scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-zinc-950 text-zinc-100;
   }
 
   .secondText {

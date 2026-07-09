@@ -44,10 +44,10 @@
 <template>
   <div v-if="mobileMenuOpen" class="fixed inset-0 z-10 min-w-screen min-h-screen transparent" @click="mobileMenuOpen = false"/>
   <nav class="fixed top-0 left-0 w-full z-20">
-    <div class="w-[90%] mx-auto my-5 py-3 px-6 flex flex-col border border-white/5 rounded-2xl bg-zinc-950/50 dark:bg-zinc-950/50 backdrop-blur-md top-0 left-0">
+    <div class="w-[90%] mx-auto my-5 py-3 px-6 flex flex-col myBorder border-border-color-light bg-background-primary/50 dark:bg-background-primary/50 backdrop-blur-md top-0 left-0">
       <div class="flex flex-row justify-between items-center">
         <a href="#">
-          <h2 class="text-[1.3rem] md:text-[1.45rem] tracking-wide text-white">
+          <h2 class="text-[1.3rem] md:text-[1.45rem] tracking-wide ">
             Mateusz Łaski
           </h2>
         </a>
@@ -57,8 +57,8 @@
               <a :href="'#' + link.href" class="linkStyle" :class="activeSection === link.href ? 'linkActive' : 'linkDeactivate'">{{link.name}}</a>
             </li>
           </ul>
-          <a href="https://github.com/25green28" target="_blank" rel="noopener noreferrer" class="w-fit h-full border border-1 border-white/5 p-1 rounded-xl flex flex-row justify-center items-center transition-color duration-200 hover:bg-white/5">
-              <Icon name="mdi:github" class="h-8 w-8 shrink-0 bg-white/40"/>
+          <a href="https://github.com/25green28" target="_blank" rel="noopener noreferrer" class="w-fit border border-white/5 p-1 rounded-xl flex flex-row justify-center items-center transition-color duration-200 hover:bg-white/5">
+              <Icon name="mdi:github" class="h-8 w-8 shrink-0 bg-white/40 text-3xl"/>
           </a>
         </div>
         <button class="md:hidden" @click="mobileMenuOpen = !mobileMenuOpen">
@@ -74,20 +74,24 @@
         </ul>
       </div>
     </div>
-    <div class="absolute inset-x-0 top-0 left-0 h-12 pointer-events-none bg-gradient-to-b from-zinc-950 to-transparent"></div>
+    <div class="absolute inset-x-0 top-0 left-0 h-12 pointer-events-none bg-gradient-to-b from-background-primary to-transparent"></div>
   </nav>
 </template>
 
 <style scoped>
+  @reference "tailwindcss";
+
   .linkActive {
-    @apply relative
-      font-bold
-      text-green-400
+    @apply relative font-bold text-[var(--color-primary)]
   }
 
   .linkDeactivate {
-    @apply text-zinc-200
-      hover:text-zinc-100
+    color: var(--color-text-secondary);
+    transition: color 0.2s ease;
+  }
+
+  .linkDeactivate:hover {
+    color: var(--color-text-primary);
   }
 
   .linkStyle   {
@@ -95,10 +99,10 @@
       after:content-['']
       after:absolute
       after:w-0
-      after:h-[0.1em]
+      after:h-[0.15em]
       after:bottom-[-0.05em]
       after:left-0
-      after:bg-green-400
+      after:bg-[var(--color-primary)]
       hover:after:w-full
       after:transition-all
       after:duration-200
