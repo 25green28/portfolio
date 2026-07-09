@@ -29,6 +29,7 @@
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               activeSection.value = entry.target.id
+              console.log(activeSection.value);
             }
           })
         }, {
