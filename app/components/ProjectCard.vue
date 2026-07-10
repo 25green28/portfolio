@@ -5,9 +5,9 @@
 </script>
 
 <template>
-  <article class="relative min-h-[20rem] min-w-[20rem] max-w-[20rem] myBorder border-border-color-strong overflow-hidden
+  <article class="group/card relative min-h-[20rem] min-w-[20rem] max-w-[20rem] myBorder border-border-color-strong overflow-hidden
                   transition duration-200 hover:bg-white/2 hover:shadow-lg hover:scale-[1.02] group">
-    <img src="/templateProjectImg.png" alt="Project preview image" class="h-[14rem] w-full object-cover rounded-xl"/>
+    <img src="/templateProjectImg.png" alt="Project preview image" class="min-h-[14rem] max-h-[14rem] w-full object-cover rounded-xl group-hover/card:scale-[1.04] transition-scale duration-200"/>
     <ul class="absolute w-full px-2 opacity-0 group-hover:opacity-100 top-[11.75rem] left-0
                 flex overflow-x-auto justify-center gap-2 transition-opacity duration-200 scrollbar-none">
         <span

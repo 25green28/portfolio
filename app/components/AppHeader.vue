@@ -99,12 +99,13 @@
       after:content-['']
       after:absolute
       after:w-0
-      after:h-[0.15em]
+      after:h-[0.125em]
       after:bottom-[-0.05em]
       after:left-0
       after:bg-[var(--color-primary)]
       hover:after:w-full
       after:transition-all
       after:duration-200
+      after:rounded-full
   }
 </style>

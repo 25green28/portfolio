@@ -201,9 +201,8 @@
           <div class="absolute inset-y-0 left-0 flex items-start pt-3 pl-3 pointer-events-none ">
             <Icon name="mdi:message" class="w-5 h-5 shrink-0 text-lg"/>
           </div>
-          <textarea type="text" placeholder="Message" class="myBorder border-border-color-strong bg-white/5 pl-10 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-green-700 min-h-20" required/>
+          <textarea type="text" placeholder="Message" class="myBorder border-border-color-strong bg-white/5 pl-10 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-green-700 min-h-20 hover:bg-white/7" required/>
         </div>
-<!--        <textarea placeholder="Message" class="myBorder border-border-color-light"></textarea>-->
         <button type="submit" class="myBorder border-border-color-strong bg-primary-button hover:bg-primary-button-hover transition-colors duration-200 py-1 px-20 w-fit">Send</button>
       </form>
       <div class="flex flex-row items-center justify-center gap-5 pt-16">
