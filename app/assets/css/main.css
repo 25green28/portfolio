@@ -25,3 +25,17 @@
     border-style: solid;
     border-radius: 1rem;
 }
+
+@layer base {
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+        -webkit-text-fill-color: #ffffff !important;
+
+        /* Changes the background color using an inset shadow */
+        -webkit-box-shadow: 0 0 0px 1000px rgb(255, 255, 255, 0.125) inset !important;
+
+        /* Smooths out the transition when autofill triggers */
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}

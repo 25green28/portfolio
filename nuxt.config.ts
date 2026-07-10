@@ -12,5 +12,10 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss()
     ]
+  },
+  runtimeConfig: {
+    public: {
+      web3formsKey: process.env.NUXT_PUBLIC_WEB3FORMS_KEY,
+    }
   }
 })
