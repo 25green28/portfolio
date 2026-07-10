@@ -5,6 +5,8 @@
   import TechnologyItem from "~/components/TechnologyItem.vue";
   import TechnologyHeader from "~/components/TechnologyHeader.vue"
   import Button from "~/components/Button.vue";
+  import FormInputField from "../components/FormInputField.vue";
+  import SocialBadge from "../components/SocialBadge.vue"
 
   const experienceIn = ["Java", "React", "Spring Boot", "Next.js"]
   const actionOptions = ["My projects", "Contact me"]
@@ -189,8 +191,26 @@
     </section>
   </Section>
   <Section>
-    <section id="contact" class="min-h-screen">
-      Contact
+    <section id="contact" class="min-h-screen lg:px-32 pt-32">
+      <h2 class="font-bold text-5xl text-center pb-10">Contact me</h2>
+      <p class="text-text-secondary text-center pb-10">Do you have a question or want to get in touch?</p>
+      <form class="flex flex-col gap-4 lg:gap-6 items-center justify-self-center self-center w-96 lg:w-lg myBorder border-border-color-light p-4">
+        <FormInputField icon="material-symbols:person" placeholder="Name"/>
+        <FormInputField icon="mdi:email" placeholder="Email"/>
+        <div class="relative w-full">
+          <div class="absolute inset-y-0 left-0 flex items-start pt-3 pl-3 pointer-events-none ">
+            <Icon name="mdi:message" class="w-5 h-5 shrink-0 text-lg"/>
+          </div>
+          <textarea type="text" placeholder="Message" class="myBorder border-border-color-strong bg-white/5 pl-10 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-green-700 min-h-20" required/>
+        </div>
+<!--        <textarea placeholder="Message" class="myBorder border-border-color-light"></textarea>-->
+        <button type="submit" class="myBorder border-border-color-strong bg-primary-button hover:bg-primary-button-hover transition-colors duration-200 py-1 px-20 w-fit">Send</button>
+      </form>
+      <div class="flex flex-row items-center justify-center pt-16">
+        <SocialBadge icon="mdi:github" href="https://github.com/25green28"/>
+        <SocialBadge icon="mdi:instagram" href="https://instagram.com/25green28"/>
+        <SocialBadge icon="simple-icons:hyperskill" href="https://hyperskill.org/my-learning/622461615"/>
+      </div>
     </section>
   </Section>
 </template>
