@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import SocialBadge from "~/components/SocialBadge.vue"
+
   const mobileMenuOpen = ref(false)
   const activeSection = ref('home')
 
@@ -57,9 +59,7 @@
               <a :href="'#' + link.href" class="linkStyle" :class="activeSection === link.href ? 'linkActive' : 'linkDeactivate'">{{link.name}}</a>
             </li>
           </ul>
-          <a href="https://github.com/25green28" target="_blank" rel="noopener noreferrer" class="w-fit border border-white/5 p-1 rounded-xl flex flex-row justify-center items-center transition-color duration-200 hover:bg-white/5">
-              <Icon name="mdi:github" class="h-8 w-8 shrink-0 bg-white/40 text-3xl"/>
-          </a>
+          <SocialBadge href="https://github.com/25green28" icon="mdi:github"/>
         </div>
         <button class="md:hidden" @click="mobileMenuOpen = !mobileMenuOpen">
           <Icon :name="mobileMenuOpen ? 'material-symbols:close-rounded' : 'material-symbols:menu-rounded'" :class="['h-8 w-8 transition-all duration-300', mobileMenuOpen ? 'rotate-90' : 'rotate-0']"/>

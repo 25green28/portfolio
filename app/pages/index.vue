@@ -206,7 +206,7 @@
 <!--        <textarea placeholder="Message" class="myBorder border-border-color-light"></textarea>-->
         <button type="submit" class="myBorder border-border-color-strong bg-primary-button hover:bg-primary-button-hover transition-colors duration-200 py-1 px-20 w-fit">Send</button>
       </form>
-      <div class="flex flex-row items-center justify-center pt-16">
+      <div class="flex flex-row items-center justify-center gap-5 pt-16">
         <SocialBadge icon="mdi:github" href="https://github.com/25green28"/>
         <SocialBadge icon="mdi:instagram" href="https://instagram.com/25green28"/>
         <SocialBadge icon="simple-icons:hyperskill" href="https://hyperskill.org/my-learning/622461615"/>
