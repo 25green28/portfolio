@@ -36,7 +36,8 @@
               </div>
               <div class="flex flex-col lg:flex-row gap-5 min-w-full">
                 <a :href="index === 0 ? '#projects' : '#contact'" v-for="(item, index) in actionOptions" :key="item">
-                  <Button :class="index === 0 ? 'bg-primary-button hover:bg-primary-button-hover' : 'bg-secondary-button hover:bg-secondary-button-hover'">
+                  <Button :class="index === 0 ? 'bg-primary-button hover:bg-primary-button-hover text-primary-button-text'
+                          : 'bg-secondary-button hover:bg-secondary-button-hover myBorder border-border-color-light'">
                     <Icon v-if="index === 0" name="eos-icons:application" class="w-5 h-5 shrink-0"/>
                     <Icon v-if="index === 1" name="ic:outline-email" class="w-5 h-5 shrink-0"/>
                     {{item}}

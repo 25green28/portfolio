@@ -59,7 +59,7 @@
               <a :href="'#' + link.href" class="linkStyle" :class="activeSection === link.href ? 'linkActive' : 'linkDeactivate'">{{link.name}}</a>
             </li>
           </ul>
-          <SocialBadge href="https://github.com/25green28" icon="mdi:github"/>
+          <SocialBadge href="https://github.com/25green28" icon="mdi:github" class="p-1"/>
         </div>
         <button class="md:hidden" @click="mobileMenuOpen = !mobileMenuOpen">
           <Icon :name="mobileMenuOpen ? 'material-symbols:close-rounded' : 'material-symbols:menu-rounded'" :class="['h-8 w-8 transition-all duration-300', mobileMenuOpen ? 'rotate-90' : 'rotate-0']"/>
@@ -82,7 +82,7 @@
   @reference "tailwindcss";
 
   .linkActive {
-    @apply relative font-bold text-(--color-primary)
+    @apply relative font-bold text-primary
   }
 
   .linkDeactivate {
@@ -102,7 +102,7 @@
       after:h-[0.125em]
       after:bottom-[-0.05em]
       after:left-0
-      after:bg-(--color-primary)
+      after:bg-primary
       hover:after:w-full
       after:transition-all
       after:duration-200

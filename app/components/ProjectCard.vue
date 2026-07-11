@@ -17,7 +17,7 @@
         <li
             v-for="tech in project.technologies"
             :key="tech"
-            class="px-2 lg:px-3 py-[0.2rem] border border-white/5 rounded-xl text-text-secondary text-sm bg-zinc-800/50 whitespace-nowrap"
+            class="px-2 lg:px-3 py-[0.2rem] myBorder border-border-color-strong rounded-xl text-primary-button-text bg-zinc-800/60 dark:bg-zinc-800/50 whitespace-nowrap"
         >
           {{ tech }}
         </li>
@@ -30,12 +30,12 @@
         {{project.description}}
       </p>
       <div v-if="project.liveDemo || project.github" class="flex flex-row flex-wrap gap-2 px-2 items-center">
-        <Button v-if="project.liveDemo" class="group/liveDemoIco px-4 py-2 bg-primary-button hover:bg-primary-button-hover overflow-hidden gap-0 hover:gap-2">
+        <Button v-if="project.liveDemo" class="group/liveDemoIco px-4 py-2 bg-primary-button hover:bg-primary-button-hover text-primary-button-text overflow-hidden gap-0 hover:gap-2">
           <Icon name="famicons:open-outline" class="w-5 h-5 shrink-0"/>
           <p class="max-w-0 opacity-0 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover/liveDemoIco:max-w-20 group-hover/liveDemoIco:opacity-100 text-sm">Live demo</p>
         </Button>
         <Button v-if="project.github" class="group/githubIco px-4 py-2 bg-secondary-button hover:bg-secondary-button-hover overflow-hidden gap-0 hover:gap-2"
-                :class="project.liveDemo ? 'bg-secondary-button hover:bg-secondary-button-hover' : 'bg-primary-button hover:bg-primary-button-hover'">
+                :class="project.liveDemo ? 'bg-secondary-button hover:bg-secondary-button-hover' : 'bg-primary-button hover:bg-primary-button-hover text-primary-button-text'">
           <Icon name="mynaui:github" class="w-5 h-5 shrink-0"/>
           <p class="max-w-0 opacity-0 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover/githubIco:max-w-20 group-hover/githubIco:opacity-100 text-sm">Github</p>
         </Button>

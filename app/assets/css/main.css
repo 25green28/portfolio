@@ -1,23 +1,63 @@
 @import "tailwindcss";
 
+:root {
+    --background: var(--color-zinc-100);
+    --surface: rgba(0, 0, 0, 0.05);
+
+    --text-primary: var(--color-zinc-900);
+    --text-secondary: var(--color-zinc-700);
+
+    --primary: var(--color-green-600);
+    --primary-hover: var(--color-green-700);
+    --primary-button: var(--color-green-600);
+    --primary-button-hover: var(--color-green-700);
+    --primary-button-text: var(--color-zinc-100);
+
+    --secondary-button: var(--color-zinc-200);
+    --secondary-button-hover: var(--color-zinc-300);
+
+    --border-color-strong: rgba(0, 0, 0, 0.2);
+    --border-color-light: rgba(0, 0, 0, .075);
+}
+
+.dark {
+    --background: var(--color-zinc-900);
+    --surface: rgb(255, 255, 255, 0.05);
+
+    --text-primary: var(--color-zinc-100);
+    --text-secondary: var(--color-zinc-200);
+
+   --primary: var(--color-green-400);
+   --primary-hover: var(--color-green-500);
+   --primary-button: var(--color-green-600);
+   --primary-button-hover: var(--color-green-700);
+    --primary-button-text: var(--text-primary);
+
+   --secondary-button: var(--color-zinc-900);
+   --secondary-button-hover: var(--color-zinc-800);
+
+   --border-color-strong: rgba(255, 255, 255, 0.1);
+   --border-color-light: rgba(255, 255, 255, 0.075);
+}
+
 @theme {
-    --color-background-primary: var(--color-zinc-900);
+    --color-background-primary: var(--background);
+    --color-surface: var(--surface);
 
-    --color-text-primary: var(--color-zinc-100);
-    --color-text-secondary: var(--color-zinc-200);
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
 
-    --color-primary: var(--color-green-400);
-    --color-primary-hover: var(--color-green-500);
-    --color-primary-button: var(--color-green-600);
-    --color-primary-button-hover: var(--color-green-700);
+    --color-primary: var(--primary);
+    --color-primary-hover: var(--primary-hover);
+    --color-primary-button: var(--primary-button);
+    --color-primary-button-hover: var(--primary-button-hover);
+    --color-primary-button-text: var(--primary-button-text);
 
-    --color-secondary-button: var(--color-zinc-900);
-    --color-secondary-button-hover: var(--color-zinc-800);
-    /*--color-secondary-card: var(--color-red-900);*/
-    /*--color-secondary-card-hover: var(--color-red-700);*/
+    --color-secondary-button: var(--secondary-button);
+    --color-secondary-button-hover: var(--secondary-button-hover);
 
-    --color-border-color-strong: rgba(255, 255, 255, 0.1);
-    --color-border-color-light: rgba(255, 255, 255, 0.075);
+    --color-border-color-strong: var(--border-color-strong);
+    --color-border-color-light: var(--border-color-light);
 }
 
 @utility myBorder {
@@ -30,10 +70,10 @@
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus {
-        -webkit-text-fill-color: #ffffff !important;
+        -webkit-text-fill-color: var(--text-primary) !important;
 
         /* Changes the background color using an inset shadow */
-        -webkit-box-shadow: 0 0 0px 1000px rgb(255, 255, 255, 0.125) inset !important;
+        -webkit-box-shadow: 0 0 0 1000px var(--background) inset !important;
 
         /* Smooths out the transition when autofill triggers */
         transition: background-color 5000s ease-in-out 0s;

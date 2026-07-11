@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <span class="border px-3 lg:px-4 py-1 border-white/5 rounded-full text-text-secondary text-sm bg-zinc-800/50">
+  <span class="px-3 lg:px-4 py-1 myBorder border-border-color-light text-text-secondary text-sm bg-surface">
     <slot/>
   </span>
 </template>

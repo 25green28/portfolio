@@ -2,9 +2,16 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
+  app: {
+    head: {
+      meta: [
+        { name: 'color-scheme', content: 'light dark' }
+      ]
+    }
+  },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/icon'],
+  modules: ['@nuxt/icon', '@nuxtjs/color-mode'],
   css: [
       "~/assets/css/main.css"
   ],

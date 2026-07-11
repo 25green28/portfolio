@@ -71,7 +71,7 @@
     </div>
   </div>
   <Section>
-    <section id="contact" class="lg:px-32 pt-32">
+    <section id="contact" class="px-5 lg:px-32 pt-32">
       <h2 class="font-bold text-5xl text-center pb-10">Contact me</h2>
       <p class="text-text-secondary text-center pb-10">Do you have a question or want to get in touch?</p>
       <div class="flex items-center justify-center">
@@ -86,7 +86,7 @@
             <textarea name="message" id="message" type="text" placeholder="Message" class="myBorder border-border-color-strong bg-white/5 pl-10 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-green-700 min-h-20 hover:bg-white/7" required/>
           </div>
 
-          <button type="submit" :disabled="status === 'loading'" class="myBorder border-border-color-strong bg-primary-button hover:bg-primary-button-hover transition-colors duration-200 py-1 px-20 w-fit">
+          <button type="submit" :disabled="status === 'loading'" class="rounded-2xl bg-primary-button hover:bg-primary-button-hover text-primary-button-text transition-colors duration-200 py-1.5 px-20 w-fit">
             {{ status === 'loading' ? 'Sending...' : 'Send Message'}}
           </button>
         </form>
