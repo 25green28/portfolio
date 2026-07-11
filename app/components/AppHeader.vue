@@ -74,7 +74,7 @@
         </ul>
       </div>
     </div>
-    <div class="absolute inset-x-0 top-0 left-0 h-12 pointer-events-none bg-gradient-to-b from-background-primary to-transparent"></div>
+    <div class="absolute inset-x-0 top-0 left-0 h-12 pointer-events-none bg-linear-to-b from-background-primary to-transparent"></div>
   </nav>
 </template>
 
@@ -82,7 +82,7 @@
   @reference "tailwindcss";
 
   .linkActive {
-    @apply relative font-bold text-[var(--color-primary)]
+    @apply relative font-bold text-(--color-primary)
   }
 
   .linkDeactivate {
@@ -102,7 +102,7 @@
       after:h-[0.125em]
       after:bottom-[-0.05em]
       after:left-0
-      after:bg-[var(--color-primary)]
+      after:bg-(--color-primary)
       hover:after:w-full
       after:transition-all
       after:duration-200

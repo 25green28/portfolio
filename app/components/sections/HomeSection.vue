@@ -10,7 +10,7 @@
 <template>
   <Section>
     <section id="home" class="min-h-screen">
-      <div class="w-full h-screen flex flex-col items-center justify-center">
+      <div class="w-full min-h-screen py-20 flex flex-col items-center justify-center">
         <div class="h-fit max-w-full lg:m-10 p-5 lg:dark:bg-background-primary/40 lg:backdrop-blur-md
                     lg:myBorder lg:border-border-color-light flex flex-col lg:flex-row lg:items-center justify-center gap-5
                     lg:gap-20 xl:gap-64">
@@ -55,5 +55,4 @@
 </template>
 
 <style scoped>
-
 </style>

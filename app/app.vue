@@ -17,8 +17,4 @@
   html {
     scroll-behavior: smooth;
   }
-
-  .secondText {
-    @apply text-zinc-300;
-  }
 </style>

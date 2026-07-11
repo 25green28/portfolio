@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const props = defineProps({
+  defineProps({
     technology: {
       type: String,
       required: true

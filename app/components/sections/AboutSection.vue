@@ -73,12 +73,12 @@
 
 <template>
   <Section>
-    <section id="about" class="min-h-screen px-5 lg:px-32 pt-32">
+    <section id="about" class="px-5 lg:px-32 pt-32">
       <h2 class="font-bold text-5xl text-center pb-10">About me</h2>
       <div class="flex flex-row items-stretch justify-center gap-5
                      lg:gap-20 xl:gap-20">
         <!--        <img src="/aboutmeTemplateImage.jpg" class="hidden lg:block max-w-[30vw] h-96">-->
-        <div class="text-md max-w-[700px]">
+        <div class="text-md max-w-175">
           <p>I'm a <b class="aboutme-b">passionate software developer</b> who is fascinated by computer science and have enjoyed exploring different programming languages and technologies.</p>
           <br class="aboutme-br">
           <p>The first language I studied in depth was <b class="aboutme-b">Java</b>, and it quickly became my favorite for backend development. Today, I'm expanding my skills with <b class="aboutme-b">Spring Boot</b> to build scalable and modern web applications.</p>
