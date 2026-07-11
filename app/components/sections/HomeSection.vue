@@ -2,8 +2,8 @@
   import TechnologyPill from "~/components/TechnologyPill.vue";
   import Button from "~/components/Button.vue";
   import Section from "~/components/Section.vue";
+  import { experience } from "~/data/experience";
 
-  const experienceIn = ["Java", "React", "Spring Boot", "Next.js"]
   const actionOptions = ["My projects", "Contact me"]
 </script>
 
@@ -29,7 +29,7 @@
             <div class="flex flex-col gap-8 w-full md:w-fit">
               <div class="flex flex-col justify-center gap-3 text-zinc-200">
                 <div class="flex flex-row items-space gap-3 lg:gap-5 min-w-full flex-wrap">
-                  <TechnologyPill v-for="item in experienceIn" :key="item">
+                  <TechnologyPill v-for="item in experience" :key="item">
                     {{item}}
                   </TechnologyPill>
                 </div>

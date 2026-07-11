@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import ProjectCard from "~/components/ProjectCard.vue";
   import Section from "~/components/Section.vue";
+  import { projects } from "~/data/projects";
 </script>
 
 <template>
@@ -9,16 +10,7 @@
       <h2 class="font-bold text-5xl text-center">My Projects</h2>
       <p class="text-text-secondary text-center pt-12">Everything from hobbist projects to real world-like applications</p>
       <div class="flex flex-row flex-wrap justify-center gap-x-12 gap-y-16 pt-16 mx-12">
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
+        <ProjectCard v-for="project in projects" :key="project.id" :project="project"/>
       </div>
     </section>
   </Section>

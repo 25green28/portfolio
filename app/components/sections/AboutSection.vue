@@ -2,67 +2,8 @@
   import TechnologyItem from "~/components/TechnologyItem.vue";
   import Section from "~/components/Section.vue";
   import TechnologyHeader from "~/components/TechnologyHeader.vue";
-
-  const backendTechnologies = [
-    {
-      name: "Java",
-      icon: "devicon:java"
-    },
-    {
-      name: "Spring Boot",
-      icon: "devicon:spring"
-    }
-  ]
-
-  const frontendTechnologies = [
-    {
-      name: "JavaScript",
-      icon: "devicon:javascript"
-    },
-    {
-      name: "TypeScript",
-      icon: "devicon:typescript"
-    },
-    {
-      name: "React",
-      icon: "devicon:react"
-    },
-    {
-      name: "Vue",
-      icon: "devicon:vuejs"
-    },
-    {
-      name: "Next.js",
-      icon: "devicon:nextjs"
-    },
-    {
-      name: "Nuxt",
-      icon: "devicon:nuxt"
-    },
-    {
-      name: "Tailwind CSS",
-      icon: "devicon:tailwindcss"
-    }
-  ]
-
-  const toolsTechnologies = [
-    {
-      name: "Git",
-      icon: "devicon:git"
-    },
-    {
-      name: "GitHub",
-      icon: "mdi:github"
-    },
-    {
-      name: "Docker",
-      icon: "devicon:docker"
-    },
-    {
-      name: "JetBrains",
-      icon: "devicon:jetbrains"
-    }
-  ]
+  import type { TechnologyCategory, Technology } from "~/data/technologies";
+  import { technologies } from "~/data/technologies";
 
   const hasScrolled = ref(false);
 
@@ -98,14 +39,8 @@
               <div class="absolute inset-x-0 top-0 h-12 pointer-events-none bg-linear-to-b from-background-primary to-transparent rounded-2xl z-10"></div>
 
               <div @scroll="handleScroll" class="flex flex-col gap-2 p-2 w-full h-full overflow-y-scroll">
-                <TechnologyHeader class="pt-2" header="Backend">
-                  <TechnologyItem v-for="tech in backendTechnologies" :key="tech.name" :technology="tech.name" :icon="tech.icon"/>
-                </TechnologyHeader>
-                <TechnologyHeader class="pt-6" header="Frontend">
-                  <TechnologyItem v-for="tech in frontendTechnologies" :key="tech.name" :technology="tech.name" :icon="tech.icon"/>
-                </TechnologyHeader>
-                <TechnologyHeader class="pt-6" header="Tools">
-                  <TechnologyItem v-for="tech in toolsTechnologies" :key="tech.name" :technology="tech.name" :icon="tech.icon"/>
+                <TechnologyHeader v-for="techCategory in technologies" :key="techCategory.name" class="pt-2" header="Backend">
+                  <TechnologyItem v-for="tech in techCategory.technologies" :key="tech.name" :technology="tech.name" :icon="tech.icon"/>
                 </TechnologyHeader>
               </div>
 
