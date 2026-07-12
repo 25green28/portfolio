@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/icon', '@nuxtjs/color-mode', '@nuxt/fonts', '@nuxtjs/sitemap'],
+  modules: ['@nuxt/icon', '@nuxtjs/color-mode', '@nuxt/fonts', '@nuxtjs/sitemap', '@vercel/analytics'],
   css: [
       "~/assets/css/main.css"
   ],
