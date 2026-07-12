@@ -21,4 +21,14 @@
   html {
     scroll-behavior: smooth;
   }
+
+  body {
+    font-family: 'Public Sans', system-ui;
+  }
+
+  input, textarea, button, select {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
 </style>

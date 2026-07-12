@@ -82,7 +82,7 @@
   @reference "tailwindcss";
 
   .linkActive {
-    @apply relative font-bold text-primary
+    @apply relative font-bold text-(--color-primary)
   }
 
   .linkDeactivate {
@@ -102,7 +102,7 @@
       after:h-[0.125em]
       after:bottom-[-0.05em]
       after:left-0
-      after:bg-primary
+      after:bg-(--color-primary)
       hover:after:w-full
       after:transition-all
       after:duration-200

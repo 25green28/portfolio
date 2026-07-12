@@ -3,8 +3,75 @@
   import Button from "~/components/Button.vue";
   import Section from "~/components/Section.vue";
   import { experience } from "~/data/experience";
+  import { heroPhrases } from "~/data/heroPhrases";
+
+  const parentRef = ref<HTMLElement | null>(null)
+  const h3Width = ref<string>('auto')
+
+  let resizeObserver: ResizeObserver | null = null
 
   const actionOptions = ["My projects", "Contact me"]
+
+  const displayedText = ref("")
+  const charDelay = 100
+  const pauseDelay = 2000
+
+  async function typePhrase(text: string) {
+    displayedText.value = ""
+
+    for (const char of text) {
+      displayedText.value += char
+      await new Promise(resolve => setTimeout(resolve, charDelay))
+    }
+  }
+
+  async function deletePhrase() {
+    while (displayedText.value.length > 0) {
+      displayedText.value = displayedText.value.slice(0, -1)
+      await new Promise(resolve => setTimeout(resolve, charDelay))
+    }
+  }
+
+  async function startTyping() {
+    let index = 0;
+
+    while (true) {
+      await typePhrase(heroPhrases[index]!)
+
+      await new Promise(resolve => setTimeout(resolve, pauseDelay))
+
+      await deletePhrase()
+
+      await new Promise(resolve => setTimeout(resolve, charDelay * 3))
+
+      index = (index + 1) % heroPhrases.length
+    }
+  }
+
+  function updateWidth() {
+    if (parentRef.value) {
+      const width = parentRef.value.clientWidth
+      h3Width.value = `${width}px`
+    }
+  }
+
+  onMounted(() => {
+    startTyping()
+
+    if (parentRef.value) {
+      resizeObserver = new ResizeObserver(() => {
+        updateWidth()
+      })
+      resizeObserver.observe(parentRef.value)
+    }
+  })
+
+  onUnmounted(() => {
+    if (resizeObserver) {
+      resizeObserver.disconnect()
+    }
+  })
+
 </script>
 
 <template>
@@ -14,7 +81,7 @@
         <div class="h-fit max-w-full lg:m-10 p-5 lg:dark:bg-background-primary/40 lg:backdrop-blur-md
                     lg:myBorder lg:border-border-color-light flex flex-col lg:flex-row lg:items-center justify-center gap-5
                     lg:gap-20 xl:gap-64">
-          <div class="flex flex-col justify-center gap-6">
+          <div ref="parentRef" class="flex flex-col justify-center gap-6">
             <h1 class="text-5xl flex flex-col gap-3 font-bold">
               <span>
                 A Full Stack
@@ -23,8 +90,9 @@
                 Developer
               </span>
             </h1>
-            <h3 class="text-text-secondary">
-              A passionate developer who has loved building and creating since 2019.
+            <h3 :style="{ 'width': h3Width }" class="text-text-secondary break-words box-border">
+              {{ displayedText }}
+              <span class="inline-block w-1 h-[1em] bg-primary animate-pulse align-middle"></span>
             </h3>
             <div class="flex flex-col gap-8 w-full md:w-fit">
               <div class="flex flex-col justify-center gap-3 text-zinc-200">

@@ -60,6 +60,10 @@
   @reference "tailwindcss";
 
   .aboutme-b {
-    @apply text-green-700 dark:text-green-200
+    @apply text-lime-700
+  }
+
+  .dark .aboutme-b {
+    @apply text-green-200
   }
 </style>

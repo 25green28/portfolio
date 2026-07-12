@@ -14,7 +14,7 @@ export const projects: Project[] = [
         name: 'Project name 1',
         description: 'Project description 1',
         image: '/templateProjectImg.png',
-        technologies: ['Java', 'Spring Boot', 'PostgreSQL'],
+        technologies: ['Java'],
         liveDemo: 'https://project-name-1.com',
         github: 'https://github.com/project-name-1'
     },
