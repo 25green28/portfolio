@@ -13,6 +13,7 @@
     "@nuxt/fonts": "^0.14.0",
     "@nuxt/icon": "^2.2.5",
     "@nuxtjs/color-mode": "^4.0.1",
+    "@nuxtjs/sitemap": "^8.2.2",
     "@tailwindcss/vite": "^4.3.2",
     "clsx": "^2.1.1",
     "nuxt": "^4.4.8",

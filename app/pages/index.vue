@@ -6,10 +6,12 @@
 </script>
 
 <template>
-  <HomeSection/>
-  <ProjectsSection/>
-  <AboutSection/>
-  <ContactSection/>
+  <main>
+    <HomeSection/>
+    <ProjectsSection/>
+    <AboutSection/>
+    <ContactSection/>
+  </main>
 </template>
 
 <style scoped>
