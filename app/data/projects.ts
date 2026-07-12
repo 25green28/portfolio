@@ -10,35 +10,20 @@ export type Project = {
 
 export const projects: Project[] = [
     {
-        id: 'project-name-1',
-        name: 'Project name 1',
-        description: 'Project description 1',
-        image: '/templateProjectImg.png',
-        technologies: ['Java'],
-        liveDemo: 'https://project-name-1.com',
-        github: 'https://github.com/project-name-1'
+        id: 'my-diy-library',
+        name: 'My DIY Library',
+        description: 'A website that allows users to create their own DIY Library by using Python and Flask, by following a step-by-step guide.',
+        image: '/projectsImages/my-diy-library.png',
+        technologies: ['React', 'Vite', 'TailwindCSS', 'TypeScript'],
+        github: 'https://github.com/25green28/my-diy-library'
     },
     {
-        id: 'project-name-2',
-        name: 'Project name 2',
-        description: 'Project description 2',
-        image: '/templateProjectImg.png',
-        technologies: ['Git', 'Spring Boot', 'PostgreSQL'],
-        liveDemo: 'https://project-name-1.com',
-    },
-    {
-        id: 'project-name-3',
-        name: 'Project name 3',
-        description: 'Project description 3',
-        image: '/templateProjectImg.png',
-        technologies: ['Docker', 'Spring Boot', 'PostgreSQL'],
-        github: 'https://github.com/project-name-1'
-    },
-    {
-        id: 'project-name-4',
-        name: 'Project name 4',
-        description: 'Project description 4',
-        image: '/templateProjectImg.png',
-        technologies: ['Python', 'Spring Boot', 'PostgreSQL'],
+        id: 'portfolio',
+        name: 'Portfolio',
+        description: 'A portfolio website that showcases my projects and experience (this website).',
+        image: '/projectsImages/portfolio.png',
+        technologies: ['Vue', 'Nuxt', 'TailwindCSS', 'TypeScript'],
+        liveDemo: 'https://mateuszlaski.vercel.app',
+        github: 'https://github.com/25green28/portfolio'
     }
 ]
