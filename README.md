@@ -1,75 +1,32 @@
-# Nuxt Minimal Starter
+# Mateusz Łaski Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This repository contains the source code for my personal portfolio, which is available at:
 
-## Setup
+🌐 **https://mateuszlaski.vercel.app**
 
-Make sure to install dependencies:
+The source code is publicly available for viewing and learning purposes only.
 
-```bash
-# npm
-npm install
+No permission is granted to copy, modify, redistribute, or use this code or the portfolio design, in whole or in part, without my explicit written permission.
 
-# pnpm
-pnpm install
+## Preview
 
-# yarn
-yarn install
+![Portfolio Screenshot](public/projectsImages/portfolio.png)
 
-# bun
-bun install
-```
+## Features
 
-## Development Server
+- 🌗 Light and dark mode
+- 📱 Fully responsive design
+- ✨ Scroll animations
+- ⌨️ Typewriter hero animation
+- 🚀 SEO optimized
 
-Start the development server on `http://localhost:3000`:
+## Tech Stack
 
-```bash
-# npm
-npm run dev
+- Nuxt
+- Vue
+- Tailwind CSS
+- TypeScript
 
-# pnpm
-pnpm dev
+---
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+© 2026 Mateusz Łaski. All rights reserved.
