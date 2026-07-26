@@ -38,7 +38,7 @@
               <div class="hidden md:block md:absolute inset-x-0 top-0 h-12 pointer-events-none bg-linear-to-b from-background-primary to-transparent rounded-2xl z-10"></div>
 
               <div @scroll="handleScroll" class="flex flex-col gap-2 p-2 w-full h-full overflow-y-scroll">
-                <TechnologyHeader v-for="techCategory in technologies" :key="techCategory.name" class="pt-2" header="Backend">
+                <TechnologyHeader v-for="techCategory in technologies" :key="techCategory.name" class="pt-2" :header="techCategory.name">
                   <TechnologyItem v-for="tech in techCategory.technologies" :key="tech.name" :technology="tech.name" :icon="tech.icon"/>
                 </TechnologyHeader>
               </div>
