@@ -13,7 +13,7 @@
     ogDescription: 'Full Stack Developer specializing in Java and modern web applications.',
     ogImage: '/ogImage.jpg',
     ogImageAlt: 'Mateusz Łaski Portfolio',
-    ogUrl: 'https://mateuszlaski.vercel.app',
+    ogUrl: 'https://mateuszlaski.netlify.app',
     ogType: 'website',
 
     twitterCard: "summary_large_image",
@@ -27,7 +27,7 @@
      link: [
        {
          rel: 'canonical',
-         href: 'https://mateuszlaski.vercel.app'
+         href: 'https://mateuszlaski.netlify.app'
        },
        { rel: 'icon', href: '/favicon.ico' },
        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },

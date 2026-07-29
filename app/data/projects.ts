@@ -23,7 +23,7 @@ export const projects: Project[] = [
         description: 'A portfolio website that showcases my projects and experience (this website).',
         image: '/projectsImages/portfolio.png',
         technologies: ['Vue', 'Nuxt', 'TailwindCSS', 'TypeScript'],
-        liveDemo: 'https://mateuszlaski.vercel.app',
+        liveDemo: 'https://mateuszlaski.netlify.app',
         github: 'https://github.com/25green28/portfolio'
     }
 ]

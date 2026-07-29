@@ -2,7 +2,7 @@
 
 This repository contains the source code for my personal portfolio, which is available at:
 
-🌐 **https://mateuszlaski.vercel.app**
+🌐 **https://mateuszlaski.netlify.app**
 
 The source code is publicly available for viewing and learning purposes only.
 
