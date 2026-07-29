@@ -1,4 +1,4 @@
 User-Agent: *
 Disallow:
 
-Sitemap: https://mateuszlaski.vercel.app/sitemap.xml
+Sitemap: https://mateuszlaski.netlify.app/sitemap.xml
